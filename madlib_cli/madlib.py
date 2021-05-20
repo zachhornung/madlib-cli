@@ -79,4 +79,6 @@ if __name__ == "__main__":
       print(quit_message)
       break
   if len(words_from_user) == len(madlib_prompt):
+    with open('assets/completed_madlib.txt', 'w') as f:
+      f.write(merge(template, tuple(words_from_user)))
     print(merge(template, tuple(words_from_user)))
