@@ -7,7 +7,7 @@ def test_read_template_returns_stripped_string():
     expected = "It was a {Adjective} and {Adjective} {Noun}."
     assert actual == expected
 
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_parse_template():
     actual_stripped, actual_parts = parse_template(
         "It was a {Adjective} and {Adjective} {Noun}."
@@ -18,7 +18,7 @@ def test_parse_template():
     assert actual_stripped == expected_stripped
     assert actual_parts == expected_parts
 
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_merge():
     actual = merge("It was a {} and {} {}.", ("dark", "stormy", "night"))
     expected = "It was a dark and stormy night."
